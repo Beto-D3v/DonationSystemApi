@@ -16,13 +16,13 @@ namespace Fiap.Api.Donation1.Repository
         }
 
 
-        public UsuarioModel FindByEmailAndSenha(string email, string senha)
+        public UsuarioModel FindByEmailAndSenha(UsuarioModel usuarioModel)
         {
             var usuario = dataContext
                     .Usuarios
                     .AsNoTracking()
-                    .FirstOrDefault( u => u.Senha.Equals(senha) && 
-                                          u.EmailUsuario.Equals(email)  );
+                    .FirstOrDefault( u => u.Senha.Equals(usuarioModel.Senha) && 
+                                          u.EmailUsuario.Equals(usuarioModel.EmailUsuario));
 
             return usuario;
         }

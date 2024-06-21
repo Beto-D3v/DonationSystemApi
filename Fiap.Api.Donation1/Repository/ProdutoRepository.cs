@@ -1,4 +1,4 @@
-﻿using Fiap.Api.Donation1.Data;
+﻿    using Fiap.Api.Donation1.Data;
 using Fiap.Api.Donation1.Models;
 using Fiap.Api.Donation1.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +12,22 @@ namespace Fiap.Api.Donation1.Repository
         public ProdutoRepository(DataContext ctx)
         {
             dataContext = ctx;
+        }
+
+        public async Task<int> Count()
+        {
+            return dataContext.Produtos.Count();
+        }
+
+        public async Task<IList<ProdutoModel>> FindAll(int pagina = 0, int tamanho = 10)
+        {
+            var produtos = dataContext.Produtos
+                .Skip(tamanho * pagina)
+                .Take(tamanho)
+                .ToList();
+
+            return produtos == null ? new List<ProdutoModel>() : produtos;
+
         }
 
         public async Task<IList<ProdutoModel>> FindAll()
@@ -33,11 +49,21 @@ namespace Fiap.Api.Donation1.Repository
             return produtos == null ? new List<ProdutoModel>() : produtos;
         }
 
-        public async Task<ProdutoModel>  FindById(int id)
+        public async Task<ProdutoModel> FindById(int id)
         {
-            var produto = dataContext.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-
+            var produto =  dataContext.Produtos.FirstOrDefault(p => p.ProdutoId == id);
             return produto;
+        }
+
+        public async Task<IList<ProdutoModel>> GetAllOrderByDataCadastroAsc(DateTime? dataReferencia, int tamanho)
+        {
+            var produtos = await dataContext.Produtos
+                .Where(p => p.DataCadastro > dataReferencia)
+                .OrderBy(p => p.DataCadastro)
+                .Take(tamanho)
+                .ToListAsync();
+             
+            return produtos == null ? new List<ProdutoModel>() : produtos;
         }
 
         // Inserir
@@ -49,29 +75,17 @@ namespace Fiap.Api.Donation1.Repository
             return produtoModel.ProdutoId;
         }
 
-        public async void Update(ProdutoModel produtoModel)
+        public async Task Update(ProdutoModel produtoModel)
         {
             dataContext.Produtos.Update(produtoModel);
-            dataContext.SaveChanges();
+            await dataContext.SaveChangesAsync();
         }
 
-        public async void Delete(ProdutoModel produtoModel)
+        public async Task Delete(ProdutoModel produtoModel)
         {
             dataContext.Produtos.Remove(produtoModel);
-            dataContext.SaveChanges();
+            await dataContext.SaveChangesAsync();
         }
-
-
-        public async void Delete(int id)
-        {
-            var produtoModel = new ProdutoModel()
-            {
-                ProdutoId = id,
-            };
-
-            Delete(produtoModel);
-        }
-
 
     }
 }

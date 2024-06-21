@@ -65,11 +65,418 @@ namespace Fiap.Api.Donation1.Migrations
 
                     b.HasKey("ProdutoId");
 
+                    b.HasIndex("DataCadastro");
+
                     b.HasIndex("TipoProdutoId");
 
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Produto");
+
+                    b.HasData(
+                        new
+                        {
+                            ProdutoId = 1,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9866),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9867),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 1",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 2,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9878),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9878),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 2",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 3,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9881),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9882),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 3",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 4,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9885),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9886),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 4",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 5,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9888),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9889),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 5",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 6,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9892),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9893),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 6",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 7,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9974),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9974),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 7",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 8,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9978),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9978),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 8",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 9,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9981),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9982),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 9",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 10,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9984),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9985),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 10",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 11,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9987),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9988),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 11",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 12,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9990),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9991),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 12",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 13,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9993),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9994),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 13",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 14,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9996),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9997),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 14",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 15,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 513, DateTimeKind.Local).AddTicks(9999),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 15",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 16,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(3),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(3),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 16",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 17,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(6),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(7),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 17",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 18,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(9),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(9),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 18",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 19,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(12),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(13),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 19",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 20,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(15),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(16),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 20",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 21,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(18),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(19),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 21",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 22,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(21),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(22),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 22",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 23,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(24),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(25),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 23",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 24,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(27),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(28),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 24",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 25,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(31),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(32),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 25",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 26,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(34),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(35),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 26",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 27,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(37),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(38),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 27",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 28,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(40),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(41),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 28",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 29,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(43),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(44),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 29",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 30,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(46),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(47),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 30",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        },
+                        new
+                        {
+                            ProdutoId = 31,
+                            DataCadastro = new DateTime(2023, 10, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(49),
+                            DataExpiracao = new DateTime(2025, 4, 18, 20, 58, 7, 514, DateTimeKind.Local).AddTicks(50),
+                            Descricao = "Descrição",
+                            Disponivel = true,
+                            Nome = "Produto 31",
+                            SugestaoTroca = "Sugestão de troca",
+                            TipoProdutoId = 1,
+                            UsuarioId = 1,
+                            Valor = 1.0
+                        });
                 });
 
             modelBuilder.Entity("Fiap.Api.Donation1.Models.TipoProdutoModel", b =>
@@ -113,6 +520,36 @@ namespace Fiap.Api.Donation1.Migrations
                             Descricao = "Descrição para ar-condicionado",
                             Nome = "Ar-condicionado"
                         });
+                });
+
+            modelBuilder.Entity("Fiap.Api.Donation1.Models.TrocaModel", b =>
+                {
+                    b.Property<Guid>("TrocaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProdutoId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProdutoId2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TrocaId");
+
+                    b.HasIndex("ProdutoId1");
+
+                    b.HasIndex("ProdutoId2");
+
+                    b.ToTable("Troca");
                 });
 
             modelBuilder.Entity("Fiap.Api.Donation1.Models.UsuarioModel", b =>
@@ -191,6 +628,25 @@ namespace Fiap.Api.Donation1.Migrations
                     b.Navigation("TipoProduto");
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("Fiap.Api.Donation1.Models.TrocaModel", b =>
+                {
+                    b.HasOne("Fiap.Api.Donation1.Models.ProdutoModel", "ProdutoModel1")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Fiap.Api.Donation1.Models.ProdutoModel", "ProdutoModel2")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId2")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProdutoModel1");
+
+                    b.Navigation("ProdutoModel2");
                 });
 #pragma warning restore 612, 618
         }

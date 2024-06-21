@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "d02f63b3-f04b-41da-9759-d4044a1e26c0",
+		"name": "Fiap - Donation 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1209865"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Home - GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/home",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home - POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/home",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home - PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/home",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home - DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/home",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"home"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login - POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"EmailUsuario\" : \"fmoreni@fiap.com.br\",\r\n    \"Senha\" : \"123456\",\r\n    \"Regra\" : \"teste\",\r\n    \"NomeUsuario\" : \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7014/api/usuario/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Usuario - GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/usuario/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/usuario/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"usuario",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/api/usuario/0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"usuario",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeUsuario\": \"Aluno Admin\",\r\n    \"emailUsuario\": \"aluno-fiap@fiap.com.br\",\r\n    \"senha\": \"123456\",\r\n    \"regra\": \"aluno\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7014/api/usuario/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioid\" : 5,\r\n    \"nomeUsuario\": \"Normal Help\",\r\n    \"emailUsuario\": \"help@fiap.com.br\",\r\n    \"senha\": \"123456\",\r\n    \"regra\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7014/api/usuario/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"api",
+								"usuario",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
